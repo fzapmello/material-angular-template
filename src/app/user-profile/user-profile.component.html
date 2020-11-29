@@ -8,7 +8,7 @@
                       <p class="card-category">Complete your profile</p>
                   </div>
                   <div class="card-body">
-                      <form>
+                      <form [formGroup]="userFormGroup"  (ngSubmit)="onSubmit()" >
                           <div class="row">
                               <div class="col-md-5">
                                 <mat-form-field class="example-full-width">
@@ -17,7 +17,7 @@
                               </div>
                               <div class="col-md-3">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Username">
+                                    <input matInput placeholder="Username" formControlName="username" >
                                   </mat-form-field>
                               </div>
                               <div class="col-md-4">
@@ -61,7 +61,7 @@
                                   <input matInput placeholder="Postal Code" type="text">
                                 </mat-form-field>
                               </div>
-                          </div>
+                          </div> 
                           <div class="row">
                               <div class="col-md-12">
                                 <label>About Me</label>
